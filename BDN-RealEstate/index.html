@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDN Real Estate</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+
+<!-- Loading Page -->
+<div id="loading-page" class="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
+    <!-- Logo -->
+    <div class="text-center mb-4">
+        <h1 class="text-4xl font-bold text-green-500 animate-fade-in">BDN</h1>
+        <h2 class="text-2xl font-semibold text-black animate-fade-in">Realstate</h2>
+    </div>
+    <!-- Loading Animation -->
+    <div class="animate-spin w-16 h-16 border-t-4 border-green-500 border-solid rounded-full"></div>
+</div>
+
+ <div id="main-content" style="display: none;">
+        <!-- Your main content goes here -->
+   
+   <!-- Navbar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <div class="text-2xl font-bold">
+        <span class="text-green-500">BDN</span>
+        <span class="text-black">Real Estate</span>
+      </div>
+  
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6">
+        <li>
+          <a href="#home" class="text-gray-700 hover:text-green-500">Home</a>
+        </li>
+        <li class="relative group">
+          <a href="#sites" class="text-gray-700 hover:text-green-500">Sites</a>
+          <!-- Dropdown menu -->
+          <ul class="absolute left-0 hidden mt-2 space-y-2 bg-white shadow-lg group-hover:block">
+            <li>
+              <a href="#villa" class="block px-4 py-2 text-gray-700 hover:bg-green-500 hover:text-white">Villas</a>
+            </li>
+            <li>
+              <a href="#apartments" class="block px-4 py-2 text-gray-700 hover:bg-green-500 hover:text-white">Apartments</a>
+            </li>
+            <li>
+              <a href="#malls" class="block px-4 py-2 text-gray-700 hover:bg-green-500 hover:text-white">Malls</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#display" class="text-gray-700 hover:text-green-500">Display</a>
+        </li>
+        <li>
+          <a href="#services" class="text-gray-700 hover:text-green-500">Services</a>
+        </li>
+        <li>
+          <a href="#about" class="text-gray-700 hover:text-green-500">About Us</a>
+        </li>
+        <li>
+          <a href="#contact" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Contact Us</a>
+        </li>
+      </ul>
+  
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform -translate-x-full transition-transform md:hidden">
+      <div class="flex justify-end p-4">
+        <button id="close-menu" class="text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="flex flex-col items-center space-y-6 mt-12">
+        <li>
+          <a href="#home" class="text-gray-700 hover:text-green-500">Home</a>
+        </li>
+        <li>
+          <a href="#sites" class="text-gray-700 hover:text-green-500">Sites</a>
+        </li>
+        <li>
+          <a href="#display" class="text-gray-700 hover:text-green-500">Display</a>
+        </li>
+        <li>
+          <a href="#services" class="text-gray-700 hover:text-green-500">Services</a>
+        </li>
+        <li>
+          <a href="#about" class="text-gray-700 hover:text-green-500">About Us</a>
+        </li>
+        <li>
+          <a href="#contact" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative h-screen bg-cover bg-center"
+      style="background-image: url('./images/village.webp')"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div
+        class="relative flex items-center justify-center h-full text-center text-white"
+      >
+        <div>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">
+            Welcome to BDN Real Estate
+          </h1>
+          <p class="text-xl md:text-2xl mb-6">
+            Discover premium properties and projects designed for your dream
+            lifestyle.
+          </p>
+          <a
+            href="#projects"
+            class="bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600"
+            >View Projects</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-12 bg-gray-200">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">About BDN Real Estate</h2>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8"
+        >
+          <div class="md:w-1/2">
+            <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+            <p class="text-gray-700 mb-6">
+              BDN Real Estate is dedicated to providing exceptional real estate
+              services. We specialize in showcasing premium properties,
+              including villas, apartments, and commercial spaces. Our mission
+              is to help you find the perfect property that meets your needs and
+              exceeds your expectations.
+            </p>
+            <h3 class="text-xl font-semibold mb-4">Our Values</h3>
+            <p class="text-gray-700">
+              Integrity, professionalism, and customer satisfaction are the core
+              values that drive us. We strive to build lasting relationships
+              with our clients and provide them with the highest level of
+              service and support.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="images/village2.webp"
+              alt="About Us"
+              class="w-full h-64 object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-12 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Why Choose Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Point 1: High Quality -->
+          <div
+            class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center"
+          >
+            <i
+              class="fas fa-tools text-green-500 text-5xl mb-4 animate-bounce"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">High Quality</h3>
+            <p class="text-gray-700">
+              We ensure high standards in all our projects, delivering
+              exceptional quality.
+            </p>
+          </div>
+          <!-- Point 2: Expert Team -->
+          <div
+            class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center"
+          >
+            <i
+              class="fas fa-user-tie text-green-500 text-5xl mb-4 animate-bounce"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">Expert Team</h3>
+            <p class="text-gray-700">
+              Our team of experts is dedicated to providing top-notch service
+              and expertise.
+            </p>
+          </div>
+          <!-- Point 3: Customer Focused -->
+          <div
+            class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center"
+          >
+            <i
+              class="fas fa-handshake text-green-500 text-5xl mb-4 animate-bounce"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">Customer Focused</h3>
+            <p class="text-gray-700">
+              We prioritize our clients' needs and work closely to meet their
+              expectations.
+            </p>
+          </div>
+          <!-- Point 4: Transparent Pricing -->
+          <div
+            class="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center"
+          >
+            <i
+              class="fas fa-balance-scale text-green-500 text-5xl mb-4 animate-bounce"
+            ></i>
+            <h3 class="text-xl font-semibold mb-2">Transparent Pricing</h3>
+            <p class="text-gray-700">
+              We offer clear and upfront pricing with no hidden costs, ensuring
+              transparency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ongoing Projects Section -->
+    <section id="ongoing-projects" class="py-12 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Ongoing Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="images/ongoing1.jpg"
+              alt="Ongoing Project 1"
+              class="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">
+              Ongoing Project 1. Urban Oasis Apartments
+            </h3>
+            <p class="text-gray-700">
+              "Urban Oasis Apartments is a modern living space that redefines
+              city life with its sleek design and sustainable features. This
+              project includes a variety of apartment configurations, all
+              equipped with the latest smart home technologies. The development
+              also boasts communal spaces such as rooftop gardens, a fitness
+              center, and co-working areas, catering to the needs of
+              contemporary urban dwellers."
+            </p>
+            <p class="mt-4 text-green-600 font-semibold">Progress: 75%</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="images/ongoing2.jpg"
+              alt="Ongoing Project 1"
+              class="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">
+              Ongoing Project 2. The Grand Heights Villas
+            </h3>
+            <p class="text-gray-700">
+              "The Grand Heights Villas is an exclusive residential development
+              designed to offer a luxurious lifestyle in the heart of the city.
+              Each villa is crafted with meticulous attention to detail,
+              featuring spacious layouts, state-of-the-art amenities, and lush
+              green surroundings. This project aims to provide residents with a
+              serene and private sanctuary while being just minutes away from
+              urban conveniences."
+            </p>
+            <p class="mt-4 text-green-600 font-semibold">Progress: 60%</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="images/ongoing3.jpg"
+              alt="Ongoing Project 1"
+              class="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">
+              Ongoing Project 3. Horizon Mall Complex
+            </h3>
+            <p class="text-gray-700">
+              "Horizon Mall Complex is set to become a premier shopping and
+              entertainment destination, combining retail, dining, and leisure
+              experiences under one roof. The project includes a diverse mix of
+              international brands, gourmet restaurants, and family-friendly
+              attractions. Designed with innovative architecture and expansive
+              spaces, Horizon Mall will serve as a vibrant hub for both locals
+              and visitors alike."
+            </p>
+            <p class="mt-4 text-green-600 font-semibold">Progress: 73%</p>
+          </div>
+          <!-- Add more ongoing project cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Villas, Apartments, Malls Section -->
+    <section id="sites" class="py-12 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Properties</h2>
+        <!-- Tabs for property types -->
+        <div class="mb-8">
+          <ul class="flex justify-center space-x-4">
+            <li>
+              <a
+                href="#villas"
+                class="py-2 px-4 text-gray-700 hover:text-green-500"
+                >Villas</a
+              >
+            </li>
+            <li>
+              <a
+                href="#apartments"
+                class="py-2 px-4 text-gray-700 hover:text-green-500"
+                >Apartments</a
+              >
+            </li>
+            <li>
+              <a
+                href="#malls"
+                class="py-2 px-4 text-gray-700 hover:text-green-500"
+                >Malls</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Villas -->
+        <div id="villas" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4">Villas</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Villa Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/villa1.jpg"
+                alt="Villa 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">
+                1. Contemporary 3-Bedroom Villa
+              </h4>
+              <p class="text-gray-700">
+                "This modern villa features 3 spacious bedrooms, 2.5 bathrooms,
+                and an open-plan living area with floor-to-ceiling windows. The
+                design includes a fully equipped kitchen with premium
+                appliances, a private garden with a swimming pool, and a two-car
+                garage. Ideal for families seeking comfort and style in a sleek,
+                minimalist setting."
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/villa2.jpg"
+                alt="Villa 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">
+                2. Luxury 5-Bedroom Villa
+              </h4>
+              <p class="text-gray-700">
+                "This opulent villa offers 5 bedrooms, each with an en-suite
+                bathroom, plus a grand living room with high ceilings and
+                elegant finishes. It includes a gourmet kitchen with a breakfast
+                bar, a home theater, a large terrace with panoramic views, and a
+                landscaped garden with an infinity pool. Perfect for those
+                desiring an extravagant and spacious home."
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/villa3.jpg"
+                alt="Villa 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">
+                3. Cozy 2-Bedroom Villa
+              </h4>
+              <p class="text-gray-700">
+                "This charming villa boasts 2 bedrooms and 1.5 bathrooms in a
+                compact yet functional layout. It features an inviting living
+                area, a well-appointed kitchen, a small private patio, and a
+                low-maintenance garden. Ideal for couples or small families
+                seeking a comfortable and efficient living space with modern
+                amenities."
+              </p>
+            </div>
+            <!-- Add more villa cards here -->
+          </div>
+     
+          <div> 
+              </br>
+            <a href="display.html" id="progress-link" class="block text-center text-2xl font-semibold mb-4 text-green-600">
+              SEE MORE 
+            </a>
+          </div>
+        </div>
+        <!-- Apartments -->
+        <div id="apartments" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-4">Apartments</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Apartment Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/apartment1.webp"
+                alt="Apartment 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">Apartment Title 1</h4>
+              <p class="text-gray-700">
+                Brief description of the apartment with key features and
+                amenities.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/apartment2.webp"
+                alt="Apartment 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">Apartment Title 1</h4>
+              <p class="text-gray-700">
+                Brief description of the apartment with key features and
+                amenities.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/apartment4.jpg"
+                alt="Apartment 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">Apartment Title 1</h4>
+              <p class="text-gray-700">
+                Brief description of the apartment with key features and
+                amenities.
+              </p>
+            </div>
+
+            <!-- Add more apartment cards here -->
+          </div>
+          <div> 
+          </br>
+        <a href="display.html" id="progress-link" class="block text-center text-2xl font-semibold mb-4 text-green-600">
+          SEE MORE 
+        </a>
+      </div>
+        </div>
+        <!-- Malls -->
+        <div id="malls">
+          <h3 class="text-2xl font-semibold mb-4">Malls</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Mall Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/mall1.jpg"
+                alt="Mall 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">Mall Title 1</h4>
+              <p class="text-gray-700">
+                Brief description of the mall with key features and amenities.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/mall2.jpg"
+                alt="Mall 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">Mall Title 1</h4>
+              <p class="text-gray-700">
+                Brief description of the mall with key features and amenities.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src="images/mall3.jpg"
+                alt="Mall 1"
+                class="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h4 class="text-xl font-semibold mb-2">Mall Title 1</h4>
+              <p class="text-gray-700">
+                Brief description of the mall with key features and amenities.
+              </p>
+            </div>
+            <!-- Add more mall cards here -->
+          </div>
+          <div> 
+          </br>
+        <a href="display.html" id="progress-link" class="block text-center text-2xl font-semibold mb-4 text-green-600">
+          SEE MORE 
+        </a>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 bg-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1: Property Management -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <i class="fas fa-building text-green-500 text-5xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Property Management</h3>
+            <p class="text-gray-700">
+              Comprehensive property management services to maintain and enhance
+              your investment.
+            </p>
+          </div>
+          <!-- Service 2: Real Estate Consultancy -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <i class="fas fa-chart-line text-green-500 text-5xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Real Estate Consultancy</h3>
+            <p class="text-gray-700">
+              Expert advice and strategic planning for buying, selling, or
+              investing in real estate.
+            </p>
+          </div>
+          <!-- Service 3: Customized Construction -->
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <i class="fas fa-hammer text-green-500 text-5xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Customized Construction</h3>
+            <p class="text-gray-700">
+              Tailored construction services to create spaces that perfectly
+              match your vision and needs.
+            </p>
+          </div>
+          <!-- Add more service cards here if needed -->
+        </div>
+      </div>
+    </section>
+
+ <!-- Contact Us Section -->
+<section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto flex flex-col lg:flex-row gap-8">
+        <!-- Contact Form -->
+        <div class="lg:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <form action="#" method="post" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full p-2 border border-gray-300 rounded"></textarea>
+                </div>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Send</button>
+            </form>
+        </div>
+        <!-- Contact Information -->
+        <div class="lg:w-1/2">
+            
+                <h3 class="text-xl font-semibold mb-4">Our Contact Information</h3>
+                <p class="text-gray-700 mb-2">
+                  Address: 123 Real Estate St, City, Country
+                </p>
+                <p class="text-gray-700 mb-2">Phone: (123) 456-7890</p>
+                <p class="text-gray-700 mb-2">Email: contact@bdnrealestate.com</p>
+            <!-- Map -->
+            <div class="w-full h-64 bg-gray-200 rounded-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.247024523337!2d-122.419418!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d21b69d6b%3A0x2c7d8c01b93ec3d7!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1647224880472!5m2!1sen!2sus" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="#" class="text-green-500 hover:text-green-400">Facebook</a>
+          <a href="#" class="text-green-500 hover:text-green-400">Twitter</a>
+          <a href="#" class="text-green-500 hover:text-green-400">Instagram</a>
+          <a href="#" class="text-green-500 hover:text-green-400">LinkedIn</a>
+        </div>
+        <div class="mb-4">
+          <form action="#" method="POST" class="flex justify-center">
+            <input
+              type="email"
+              name="email"
+              placeholder="Subscribe to our newsletter"
+              class="p-2 border border-gray-600 rounded-l-lg"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-green-500 text-white px-4 py-2 rounded-r-lg hover:bg-green-600"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+        <div class="text-gray-400">
+          <p>&copy; 2024 BDN Real Estate. All rights reserved.</p>
+          <p class="text-green-500 hover:text-green-500">Powered by BDN.</p>
+          <a href="#privacy-policy" class="text-green-500 hover:text-green-400"
+            >Privacy Policy</a
+          >
+          |
+          <a href="#faq" class="text-green-500 hover:text-green-400">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+</div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

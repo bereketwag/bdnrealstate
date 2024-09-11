@@ -1,0 +1,144 @@
+html {
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+/* Navbar Styles */
+nav {
+    position: relative; /* Ensure the navbar is positioned correctly */
+    z-index: 50; /* Make sure it stays above other content */
+}
+
+/* Desktop Menu Styles */
+.md\:flex {
+    display: flex;
+}
+
+.md\:hidden {
+    display: none;
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 80%; /* Adjust width as needed */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 2rem;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Mobile Menu Transition */
+.transform {
+    transform: translateX(0);
+}
+
+.-translate-x-full {
+    transform: translateX(100%);
+}
+
+
+/* Custom styles for the hero section */
+.hero-section {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.about-image {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Custom styles for featured projects section */
+.project-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.ongoing-project-card {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.why-choose-us-card {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* styles/main.css */
+
+/* Animation for bouncing effect */
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Animation for spinning effect */
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation for pulsing effect */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for ping effect */
+.animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
